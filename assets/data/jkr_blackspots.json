@@ -1,0 +1,82 @@
+{
+  "_meta": {
+    "source": "Manually compiled sample for prototype demonstration — NOT an official JKR feed",
+    "description": "data.gov.my does not currently publish a point-level (lat/long) JKR blackspot dataset, only aggregate accident statistics tables. This file was hand-assembled in the shape a real cleaned dataset would take, using publicly known hazardous junctions in the Klang Valley as reference points, so the map/UI can be built and demoed now. Replace with a verified source (or clearly keep labelled as a sample) before final submission — see data_prep/prepare_jkr_data.py and Section 16/40 of the project brief.",
+    "prepared_on": "2026-08-31",
+    "fields": ["blackspotId", "roadName", "latitude", "longitude", "state", "district", "classification"]
+  },
+  "records": [
+    {
+      "blackspotId": "JKR-BS-0001",
+      "roadName": "Jalan Genting Klang",
+      "latitude": 3.1729,
+      "longitude": 101.7229,
+      "state": "Selangor",
+      "district": "Gombak",
+      "classification": "Junction Blackspot"
+    },
+    {
+      "blackspotId": "JKR-BS-0002",
+      "roadName": "Persiaran Setapak",
+      "latitude": 3.1955,
+      "longitude": 101.7165,
+      "state": "Wilayah Persekutuan",
+      "district": "Setapak",
+      "classification": "Road Surface Hazard"
+    },
+    {
+      "blackspotId": "JKR-BS-0003",
+      "roadName": "Jalan Kuching",
+      "latitude": 3.1815,
+      "longitude": 101.6800,
+      "state": "Wilayah Persekutuan",
+      "district": "Kuala Lumpur",
+      "classification": "Junction Blackspot"
+    },
+    {
+      "blackspotId": "JKR-BS-0004",
+      "roadName": "Federal Highway (Route 2)",
+      "latitude": 3.0898,
+      "longitude": 101.5754,
+      "state": "Selangor",
+      "district": "Petaling",
+      "classification": "High-Speed Section Hazard"
+    },
+    {
+      "blackspotId": "JKR-BS-0005",
+      "roadName": "Jalan Ampang",
+      "latitude": 3.1610,
+      "longitude": 101.7360,
+      "state": "Wilayah Persekutuan",
+      "district": "Ampang",
+      "classification": "Pedestrian Crossing Hazard"
+    },
+    {
+      "blackspotId": "JKR-BS-0006",
+      "roadName": "Jalan Kelang Lama",
+      "latitude": 3.0930,
+      "longitude": 101.6870,
+      "state": "Wilayah Persekutuan",
+      "district": "Kuala Lumpur",
+      "classification": "Road Surface Hazard"
+    },
+    {
+      "blackspotId": "JKR-BS-0007",
+      "roadName": "Persiaran Kewajipan, Shah Alam",
+      "latitude": 3.0733,
+      "longitude": 101.5185,
+      "state": "Selangor",
+      "district": "Petaling",
+      "classification": "Flood-Prone Section"
+    },
+    {
+      "blackspotId": "JKR-BS-0008",
+      "roadName": "Jalan Cheras",
+      "latitude": 3.0908,
+      "longitude": 101.7360,
+      "state": "Wilayah Persekutuan",
+      "district": "Cheras",
+      "classification": "Junction Blackspot"
+    }
+  ]
+}
