@@ -17,3 +17,6 @@ Future<void> main() async {
 
   runApp(const InfraJejakApp());
 }
+
+
+//run this files only
