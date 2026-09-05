@@ -4,9 +4,9 @@ import '../models/hazard.dart';
 /// Design tokens for Infra Jejak. Keeping colors/spacing centralised here
 /// makes it easy to keep every screen visually consistent (Section 25).
 class AppColors {
-  static const primary = Color(0xFF0B5D3B); // deep infrastructure green
+  static const primary = Color(0xFF0B5D3B);
   static const primaryLight = Color(0xFFE7F3EC);
-  static const accent = Color(0xFFF2A93B); // caution amber
+  static const accent = Color(0xFFF2A93B);
   static const background = Color(0xFFF7F8FA);
   static const surface = Colors.white;
   static const textDark = Color(0xFF1B1F23);

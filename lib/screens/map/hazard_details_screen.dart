@@ -60,7 +60,7 @@ class _HazardDetailsScreenState extends State<HazardDetailsScreen> {
     final isOfficial = hazard.source == HazardSource.officialJkr;
 
     return Scaffold(
-      appBar: AppBar(title: Text(isOfficial ? 'Blackspot Details' : 'Hazard Details')),
+      appBar: AppBar(title: Text(isOfficial ? 'Black spot Details' : 'Hazard Details')),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -71,7 +71,7 @@ class _HazardDetailsScreenState extends State<HazardDetailsScreen> {
             if (hazard.photoUrl != null) _PhotoPreview(path: hazard.photoUrl!),
             if (hazard.photoUrl != null) const SizedBox(height: 14),
             Text(
-              isOfficial ? (hazard.blackspotClassification ?? 'Blackspot') : hazard.type.label,
+              isOfficial ? (hazard.blackspotClassification ?? 'Black spot') : hazard.type.label,
               style: Theme.of(context).textTheme.titleLarge,
             ),
             const SizedBox(height: 6),
@@ -89,7 +89,7 @@ class _HazardDetailsScreenState extends State<HazardDetailsScreen> {
             _InfoRow(label: 'Report ID', value: hazard.id.length > 12 ? hazard.id.substring(0, 12) : hazard.id),
             _InfoRow(label: 'Latitude / Longitude', value: '${hazard.latitude.toStringAsFixed(5)}, ${hazard.longitude.toStringAsFixed(5)}'),
             _InfoRow(label: 'Date Reported', value: DateFormat('d MMM yyyy, h:mm a').format(hazard.dateReported)),
-            _InfoRow(label: 'Source', value: isOfficial ? 'JKR Blackspot Dataset' : 'Infra Jejak Community'),
+            _InfoRow(label: 'Source', value: isOfficial ? 'JKR Black spot Dataset' : 'Infra Jejak Community'),
             if (hazard.district != null && hazard.district!.isNotEmpty) ...[
               const SizedBox(height: 14),
               Text('District Context', style: Theme.of(context).textTheme.titleMedium),
@@ -148,7 +148,7 @@ class _HazardDetailsScreenState extends State<HazardDetailsScreen> {
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(color: const Color(0xFFEFF4FF), borderRadius: BorderRadius.circular(10)),
                 child: const Text(
-                  'This location is listed in the official JKR blackspot dataset. '
+                  'This location is listed in the official JKR black spot dataset. '
                   'It cannot be confirmed/disputed by the community.',
                   style: TextStyle(fontSize: 12, color: Color(0xFF1D4ED8)),
                 ),

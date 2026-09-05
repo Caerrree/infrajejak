@@ -5,7 +5,7 @@ import 'app_config.dart';
 import 'mock_data_store.dart';
 
 /// Handles all *dynamic* community data: reports, validations, and status
-/// changes. Static/official JKR data does NOT live here — see [DbHelper].
+/// changes. Static/official JKR data does NOT live here.
 class FirestoreService {
   FirebaseFirestore get _db => FirebaseFirestore.instance;
   // ---------------------------------------------------------------------

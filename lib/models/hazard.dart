@@ -1,5 +1,6 @@
 /// Category of road infrastructure hazard.
 /// Mirrors Section 8 of the project brief.
+
 enum HazardType {
   pothole,
   damagedRoadSurface,
@@ -9,7 +10,7 @@ enum HazardType {
   fadedRoadMarking,
   floodedRoad,
   roadObstruction,
-  other,
+  others,
 }
 
 extension HazardTypeX on HazardType {
@@ -31,7 +32,7 @@ extension HazardTypeX on HazardType {
         return 'Flooded Road';
       case HazardType.roadObstruction:
         return 'Road Obstruction';
-      case HazardType.other:
+      case HazardType.others:
         return 'Other Road Infrastructure Issue';
     }
   }
@@ -140,7 +141,7 @@ class Hazard {
   factory Hazard.fromJkrJson(Map<String, dynamic> json) {
     return Hazard(
       id: json['blackspotId'] as String,
-      type: HazardType.other,
+      type: HazardType.others,
       source: HazardSource.officialJkr,
       latitude: (json['latitude'] as num).toDouble(),
       longitude: (json['longitude'] as num).toDouble(),
@@ -158,7 +159,7 @@ class Hazard {
       id: id,
       type: HazardType.values.firstWhere(
         (e) => e.name == data['hazardType'],
-        orElse: () => HazardType.other,
+        orElse: () => HazardType.others,
       ),
       source: HazardSource.community,
       latitude: (data['latitude'] as num).toDouble(),

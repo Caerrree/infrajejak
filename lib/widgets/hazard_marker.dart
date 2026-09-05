@@ -21,7 +21,7 @@ IconData iconForHazardType(HazardType type, HazardSource source) {
       return Icons.water_drop;
     case HazardType.roadObstruction:
       return Icons.block;
-    case HazardType.other:
+    case HazardType.others:
       return Icons.report_problem_outlined;
   }
 }
