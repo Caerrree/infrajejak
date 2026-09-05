@@ -44,7 +44,6 @@ class _DistrictPopulationCardState extends State<DistrictPopulationCard> {
       );
     }
     if (_failed || _data == null) {
-      // Fails quietly — this is supplementary context, not core function.
       return const SizedBox.shrink();
     }
 

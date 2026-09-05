@@ -20,8 +20,6 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   Future<void> _bootstrap() async {
-    // Warm up the local database (prepared JKR dataset) while the splash
-    // screen is showing, so the Main Map loads instantly afterward.
     await DbHelper.instance.seedJkrDataIfEmpty();
     await Future.delayed(const Duration(milliseconds: 600));
     if (!mounted) return;

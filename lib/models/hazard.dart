@@ -1,5 +1,4 @@
-/// Category of road infrastructure hazard.
-/// Mirrors Section 8 of the project brief.
+
 
 enum HazardType {
   pothole,
@@ -53,11 +52,9 @@ extension HazardSeverityX on HazardSeverity {
   }
 }
 
-/// Where a hazard marker's information originated from.
-/// This distinction MUST remain visible in the UI (Section 23).
+
 enum HazardSource { officialJkr, community }
 
-/// Lifecycle status of a hazard/report (Section 12).
 enum HazardStatus {
   reported,
   underReview,
@@ -89,10 +86,6 @@ extension HazardStatusX on HazardStatus {
   }
 }
 
-/// Unified hazard entity used by the map, whether it originates from the
-/// static JKR/government dataset (SQLite) or a dynamic community report
-/// (Firestore). Screens should always branch on [source] before implying
-/// any official confirmation.
 class Hazard {
   final String id;
   final HazardType type;
@@ -109,7 +102,7 @@ class Hazard {
   final int confirmationCount;
   final int disputeCount;
   final String? reportedByUserId;
-  final String? blackspotClassification; // only for official records
+  final String? blackspotClassification;
 
   const Hazard({
     required this.id,

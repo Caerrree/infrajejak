@@ -11,7 +11,6 @@ class HazardProvider extends ChangeNotifier {
   bool isLoading = false;
   String? errorMessage;
 
-  // Filter state used by the Main Map screen.
   Set<HazardType> selectedTypes = HazardType.values.toSet();
   bool showOfficial = true;
   bool showCommunity = true;
