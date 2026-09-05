@@ -9,7 +9,7 @@ import '../../widgets/hazard_marker.dart';
 import '../../widgets/legend_widget.dart';
 import 'hazard_details_screen.dart';
 
-//dadadadda
+
 const _klangValleyCenter = LatLng(3.1390, 101.6869);
 
 class MainMapScreen extends StatefulWidget {
@@ -199,7 +199,8 @@ class _FilterSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final provider = context.watch<HazardProvider>();
-    return Padding(
+      return SingleChildScrollView(
+      child: Padding(
       padding: EdgeInsets.only(
         left: 20, right: 20, top: 20,
         bottom: MediaQuery.of(context).viewInsets.bottom + 24,
@@ -244,6 +245,7 @@ class _FilterSheet extends StatelessWidget {
             }).toList(),
           ),
         ],
+      ),
       ),
     );
   }
