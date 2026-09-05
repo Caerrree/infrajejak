@@ -27,8 +27,6 @@ class StatusTimeline extends StatelessWidget {
     }
 
     final currentIndex = _lifecycleOrder.indexOf(currentStatus);
-    // Only render stages up to and including the current one — future
-    // stages that haven't happened yet are intentionally omitted.
     final visibleStages = _lifecycleOrder.sublist(0, currentIndex + 1);
 
     return Column(
