@@ -4,13 +4,6 @@ import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 import '../models/hazard.dart';
 
-/// Local SQLite database.
-/// Purpose: store the *static/prepared* government dataset (JKR blackspots)
-/// so it can be queried quickly offline, without re-fetching it from the
-/// bundled asset every time. Dynamic community data lives in Firestore
-/// instead — see [FirestoreService]. This mirrors the SQLite vs Firebase
-/// split described in Section 20 of the project brief.
-
 class DbHelper {
   DbHelper._internal();
   static final DbHelper instance = DbHelper._internal();
@@ -44,10 +37,6 @@ class DbHelper {
       },
     );
   }
-
-  /// Loads the bundled, pre-cleaned JKR dataset (assets/data/jkr_blackspots.json)
-  /// into SQLite the first time the app runs. This is the "Store locally"
-  /// step at the end of the data preparation pipeline (Section 17).
 
   Future<void> seedJkrDataIfEmpty() async {
     final db = await database;

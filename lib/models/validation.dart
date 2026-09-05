@@ -1,7 +1,5 @@
 enum ValidationType { confirm, dispute }
 
-/// A single community validation vote on a report.
-/// One record per (reportId, userId) pair — enforced in FirestoreService.
 class HazardValidation {
   final String id;
   final String reportId;

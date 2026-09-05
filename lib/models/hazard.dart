@@ -130,8 +130,6 @@ class Hazard {
     this.blackspotClassification,
   });
 
-  /// Community confidence percentage, e.g. "86%". Explicitly a
-  /// community-driven figure, never an official determination.
   double get communityConfidence {
     final total = confirmationCount + disputeCount;
     if (total == 0) return 0;
