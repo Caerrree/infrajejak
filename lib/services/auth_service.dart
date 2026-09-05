@@ -4,8 +4,6 @@ import '../models/app_user.dart';
 import 'app_config.dart';
 import 'mock_data_store.dart';
 
-/// Wraps Firebase Authentication + the `users` Firestore collection.
-/// Registration/admin login for Infra-Jejak.
 class AuthService {
   fb.FirebaseAuth get _auth => fb.FirebaseAuth.instance;
   FirebaseFirestore get _firestore => FirebaseFirestore.instance;
@@ -14,8 +12,6 @@ class AuthService {
     if (AppConfig.useMockBackend) return MockDataStore.instance.currentUser;
     final u = _auth.currentUser;
     if (u == null) return null;
-    // In real mode, callers should prefer fetchUserProfile(uid) for full
-    // profile data (role, name); this is a lightweight fallback.
     return AppUser(
       uid: u.uid,
       name: u.displayName ?? 'Infra Jejak User',
@@ -60,7 +56,6 @@ class AuthService {
 
   Future<AppUser> login({required String email, required String password}) async {
     if (AppConfig.useMockBackend) {
-      // Demo shortcut: logging in with "admin@infrajejak.my" signs in as admin.
       final isAdmin = email.trim().toLowerCase() == 'admin@infrajejak.my';
       final user = AppUser(
         uid: 'demo-user-1',

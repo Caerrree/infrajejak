@@ -3,9 +3,6 @@ import '../models/app_user.dart';
 import '../models/hazard.dart';
 import '../models/validation.dart';
 
-/// Simple in-memory stand-in for Firestore/Auth/Storage, used only when
-/// [AppConfig.useMockBackend] is true. Keeps the same shapes the real
-/// Firebase services return so screens never need to know which one is active.
 class MockDataStore {
   MockDataStore._internal() {
     _seedDemoReports();

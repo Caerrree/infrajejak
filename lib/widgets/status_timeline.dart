@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import '../models/hazard.dart';
 import '../theme/app_theme.dart';
 
-/// The canonical forward order of the report lifecycle. "Rejected" is
-/// handled separately since it's a terminal branch, not a forward stage.
 const _lifecycleOrder = [
   HazardStatus.reported,
   HazardStatus.communityVerified,

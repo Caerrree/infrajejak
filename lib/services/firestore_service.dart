@@ -4,13 +4,8 @@ import '../models/validation.dart';
 import 'app_config.dart';
 import 'mock_data_store.dart';
 
-/// Handles all *dynamic* community data: reports, validations, and status
-/// changes. Static/official JKR data does NOT live here.
 class FirestoreService {
   FirebaseFirestore get _db => FirebaseFirestore.instance;
-  // ---------------------------------------------------------------------
-  // REPORTS
-  // ---------------------------------------------------------------------
 
   Future<List<Hazard>> getCommunityReports() async {
     if (AppConfig.useMockBackend) {
@@ -105,12 +100,6 @@ class FirestoreService {
     });
   }
 
-  // ---------------------------------------------------------------------
-  // VALIDATIONS (confirm / dispute)
-  // ---------------------------------------------------------------------
-
-  /// Returns true if [userId] has already validated [reportId] — used to
-  /// enforce "one validation per user per report" (Section 11 & 39).
   Future<bool> hasUserValidated({
     required String reportId,
     required String userId,

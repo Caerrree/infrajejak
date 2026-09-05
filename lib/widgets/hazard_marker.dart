@@ -26,8 +26,6 @@ IconData iconForHazardType(HazardType type, HazardSource source) {
   }
 }
 
-/// A single pin used on the Main Map. Resolved hazards render muted/grey so
-/// they read as "no longer active" at a glance (Section 8).
 class HazardMarkerPin extends StatelessWidget {
   final Hazard hazard;
   final VoidCallback onTap;

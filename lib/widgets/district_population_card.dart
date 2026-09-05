@@ -2,11 +2,6 @@ import 'package:flutter/material.dart';
 import '../services/opendosm_service.dart';
 import '../theme/app_theme.dart';
 
-/// Fetches and displays live district population data from OpenDOSM
-/// (data.gov.my) for the district a hazard is located in. This is a real
-/// government API call — not bundled static data — used as transparent
-/// context (e.g. "this hazard affects a district of ~180,000 people")
-/// rather than a hidden factor in any score.
 class DistrictPopulationCard extends StatefulWidget {
   final String district;
   const DistrictPopulationCard({super.key, required this.district});

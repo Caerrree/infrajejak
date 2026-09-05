@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/hazard.dart';
 
-/// Design tokens for Infra Jejak. Keeping colors/spacing centralised here
-/// makes it easy to keep every screen visually consistent (Section 25).
 class AppColors {
   static const primary = Color(0xFF0B5D3B);
   static const primaryLight = Color(0xFFE7F3EC);

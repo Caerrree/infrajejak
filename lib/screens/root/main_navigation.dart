@@ -8,9 +8,6 @@ import '../profile/profile_screen.dart';
 import '../report/report_hazard_screen.dart';
 import '../tracking/tracking_screen.dart';
 
-/// Public-facing bottom navigation: Map | Reports | Report | Tracking | Profile.
-/// Admin functionality is not a separate tab — it's reached from Profile for
-/// authenticated admin accounts, per Section 7 of the brief.
 class MainNavigation extends StatefulWidget {
   const MainNavigation({super.key});
 

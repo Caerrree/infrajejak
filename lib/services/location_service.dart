@@ -1,7 +1,5 @@
 import 'package:geolocator/geolocator.dart';
 
-/// Wraps geolocator permission handling and current-position retrieval,
-/// used by the Main Map ("current location") and Report Hazard ("use GPS location") screens.
 class LocationService {
   Future<Position> getCurrentPosition() async {
     final serviceEnabled = await Geolocator.isLocationServiceEnabled();
