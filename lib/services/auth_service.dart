@@ -5,7 +5,7 @@ import 'app_config.dart';
 import 'mock_data_store.dart';
 
 /// Wraps Firebase Authentication + the `users` Firestore collection.
-/// Registration/admin login for Infra Jejak (Section 19).
+/// Registration/admin login for Infra-Jejak (Section 19).
 class AuthService {
   fb.FirebaseAuth get _auth => fb.FirebaseAuth.instance;
   FirebaseFirestore get _firestore => FirebaseFirestore.instance;

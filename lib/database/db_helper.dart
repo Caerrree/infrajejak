@@ -5,7 +5,6 @@ import 'package:sqflite/sqflite.dart';
 import '../models/hazard.dart';
 
 /// Local SQLite database.
-///
 /// Purpose: store the *static/prepared* government dataset (JKR blackspots)
 /// so it can be queried quickly offline, without re-fetching it from the
 /// bundled asset every time. Dynamic community data lives in Firestore

@@ -6,7 +6,7 @@ import '../services/firestore_service.dart';
 /// Central data provider for hazards. Combines:
 ///  - Official/static JKR blackspots (SQLite, prepared offline dataset)
 ///  - Dynamic community reports (Firestore, live/near-live)
-///
+
 /// Screens read from here rather than talking to SQLite/Firestore directly,
 /// so the "official vs community" merge logic lives in exactly one place.
 class HazardProvider extends ChangeNotifier {
